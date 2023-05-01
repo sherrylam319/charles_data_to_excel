@@ -1,0 +1,4 @@
+.venv
+config.py
+service_account.json
+__pychache__

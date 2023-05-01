@@ -1,0 +1,11 @@
+config_dict = {
+        "spreadsheet_id": "",
+        "key_range": "M2:BT2",
+        "input_range": "M5:BT5" 
+        }
+
+
+
+charles_data = {}
+  
+      
