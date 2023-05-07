@@ -111,5 +111,5 @@ input_charles_data = GsheetData(spreadsheet_id=config.config_dict.get("spreadshe
                                 charles_data=config.charles_data)
 
 
-#GsheetData.input_charles_value(input_charles_data)
+GsheetData.input_charles_value(input_charles_data)
 GsheetData.empty_dimensions(input_charles_data)
