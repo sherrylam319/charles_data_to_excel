@@ -40,8 +40,6 @@ class GsheetData:
         
        
 
-
-
     def dimension_key_to_dict(self):
         dimension_key = self.get_gsheet_data()
         dimension_key_list = dimension_key.get('values')[0]
@@ -57,11 +55,8 @@ class GsheetData:
         
         dimension_key_dict = self.dimension_key_to_dict()
         
-
-
         #put the value from charles_data to dimension_key_dict
-        
-        
+
         for k, v in config.charles_data.items():
             for k2, v2 in dimension_key_dict.items():
                 if k == k2:
@@ -100,6 +95,13 @@ class GsheetData:
             print(f"An error occurred: {error}")
             return error
 
+    
+    def empty_dimensions(self):
+        dimension_key_dict = self.match_dimension_val()
+        for k, v in dimension_key_dict.items():
+            if v == None or v == "":
+                print(k)
+
 
 
 
@@ -109,4 +111,5 @@ input_charles_data = GsheetData(spreadsheet_id=config.config_dict.get("spreadshe
                                 charles_data=config.charles_data)
 
 
-GsheetData.input_charles_value(input_charles_data)
+#GsheetData.input_charles_value(input_charles_data)
+GsheetData.empty_dimensions(input_charles_data)
